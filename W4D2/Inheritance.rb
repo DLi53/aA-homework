@@ -1,0 +1,3 @@
+Subclasses
+
+class SubClass < SuperClass
