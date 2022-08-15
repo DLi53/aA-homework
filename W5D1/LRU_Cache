@@ -1,4 +1,6 @@
 class LRUCache
+
+    
     def initialize(size)
         @size = size
         @cache = []
@@ -31,4 +33,4 @@ class LRUCache
     private
     # helper methods go here!
 
-  end
+end
