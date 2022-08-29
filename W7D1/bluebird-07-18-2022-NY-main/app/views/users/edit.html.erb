@@ -1,0 +1,19 @@
+<h1>Hi from EDIT.HTML.erb</h1>
+
+<form action="<%= user_url(@user) %>" method = "POST"> <!-- method only takes POST or GET -->
+    <input type="hidden" name="_method" value="PATCH"> <!-- so we put it in here -->
+
+    <label for="username">Username:</label>
+    <input id = "username" type="text" name = "user[username]" value = " <%= @user.username %>">
+    <br>
+    <label> Email:
+        <input type="email" name ="user[email]" value = " <%= @user.email %>">
+    </label>
+    <br>
+    <label> Age:
+        <input type="age" name ="user[age]" value = " <%= @user.age %>">
+    </label>
+    <br>
+    <input type="submit" value = "Create User">
+
+</form>

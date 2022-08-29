@@ -50,7 +50,21 @@ class Play
   end
 
   def self.find_by_title(title)
-      
+    play = PlayDBConnection.instance.execute(<<-SQL, title)
+        SELECT
+          *
+        FROM
+          plays
+        WHERE
+          title = ?
+    SQL
+  end
+
+  def insert
+      raise "#{self} already in database" if self.id
+      PlayDBConnection.instance.execute (SQL<<-, title:@title, year: @year, playwright_id:@playwright_id)
+        INSERT INTO
+          plays (title)
   end
 
   def self.find_by_playwright(name)

@@ -1,0 +1,7 @@
+<h1> Hi from index.html.erb</h1>
+
+<h1>Here are all users</h1>
+<ul><% @users.each do |use| %>
+    <%= render 'user', user: use, action: :index %>
+    <% end %>
+</ul>

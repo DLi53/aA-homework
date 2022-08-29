@@ -1,0 +1,19 @@
+<%# becuase of underscore, 
+this is a user partial %>
+
+
+<% if action == :show %>
+    <li> <a href="<%= users_url %>">User Index</a></li> <!--creates a link -->
+<% else %>
+    <li><a href="<%= user_url(user.id) %>">Users Show Page</a></li> <!--creates a link to specific id -->
+<% end %>
+
+
+<ul>
+    <div><li><%= user.id %> </li></div>
+    <li><%= user.username %></li>
+    <li><%= user.age %></li>
+    <li><%= user.email %></li>
+    <br>
+
+</ul>
